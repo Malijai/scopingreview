@@ -130,7 +130,7 @@ class Article(models.Model):
     origine = models.TextField(verbose_name="Ancien champ ne pas remplir ", blank=True, null=True,
                                help_text="En lien avec une ressource ou un programme? Si oui expliquer")
     autresinfos = models.TextField(verbose_name="Autres informations, commentaires", blank=True, null=True)
-    author = models.ForeignKey(User, related_name='AssistantScoping',blank=True, null=True, verbose_name="Assistant ayant procede à l'analyse",)
+    author = models.ForeignKey(User, related_name='AssistantScoping',blank=True, null=True, verbose_name="Assistant ayant procede à l'analyse", on_delete=models.DO_NOTHING)
     posted = models.DateTimeField(db_index=True, auto_now_add=True)
 
     def __str__(self):
