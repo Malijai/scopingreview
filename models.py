@@ -97,6 +97,7 @@ class Article(models.Model):
     annee = models.CharField(max_length=4,verbose_name="Année publication")
     titre  = models.CharField(max_length=250,verbose_name="Référence complète")
     resume = models.TextField(verbose_name="Objectifs")
+    abstract = models.TextField(verbose_name="Abstract original")
     resumecourt = models.CharField(max_length=250,verbose_name="Résumé en Français vulgarisé", help_text="255 caractères au max, pour affichage futur sur le site")
     articlefile = models.FileField(upload_to='DocsReferences', verbose_name="Fichier de l'article analysé", blank=True, null=True)
     originebd = models.ManyToManyField(Originebd, verbose_name="BD où l'article a été trouvé")
