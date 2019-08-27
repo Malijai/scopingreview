@@ -36,6 +36,9 @@ class ArticleAdmin(admin.ModelAdmin):
 admin.site.register(Article, ArticleAdmin)
 admin.site.register(Typepub)
 admin.site.register(Typeparticipant)
-admin.site.register(Devis)
+admin.site.register(Typeetude)
+admin.site.register(Interception)
+admin.site.register(Originebd)
+
 
 

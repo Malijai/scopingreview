@@ -305,6 +305,6 @@ def some_pdf(request, pk):
 
 def PdfExtraction(request):
     articles = Article.objects.all()
-    return render(request, 'scop/index.html',  {'articles': articles})
+    return render(request, 'index2.html',  {'articles': articles})
 
 
